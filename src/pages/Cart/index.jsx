@@ -110,22 +110,20 @@ const CartPage = () => {
         <div className="flex flex-col gap-[35px]">
           <div className="card card-compact w-[325px] h-[208px] bg-base-300 shadow-md p-[20px] flex flex-col gap-[14px]">
             <div className="flex justify-between border-b border-gray-300 pb-2">
-              <p className="text-[12px] text-slate-700">Subtotal:</p>
-              <h2 className="text-[12px] text-slate-700">
-                ${Math.ceil(totalAmount)}
-              </h2>
+              <p className="text-[12px]">Subtotal:</p>
+              <h2 className="text-[12px]">${Math.ceil(totalAmount)}</h2>
             </div>
             <div className="flex justify-between border-b border-gray-300 pb-2">
-              <p className="text-[12px] text-slate-700">Shipping:</p>
-              <p className="text-[12px] text-slate-700">$5.00</p>
+              <p className="text-[12px] ">Shipping:</p>
+              <p className="text-[12px] ">$5.00</p>
             </div>
             <div className="flex justify-between border-b border-gray-300 pb-2">
-              <p className="text-[12px] text-slate-700">Tax:</p>
-              <p className="text-[12px] text-slate-700">$115.00</p>
+              <p className="text-[12px] ">Tax:</p>
+              <p className="text-[12px] ">$115.00</p>
             </div>
             <div className="flex justify-between pb-2">
-              <p className="text-[14px] text-slate-700">Order Total:</p>
-              <h2 className="text-[14px] text-slate-700">
+              <p className="text-[14px] ">Order Total:</p>
+              <h2 className="text-[14px] ">
                 ${Math.ceil(totalAmount + 5 + 115)}
               </h2>
             </div>
