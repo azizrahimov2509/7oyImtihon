@@ -125,13 +125,20 @@ export default function Products() {
     }));
   };
 
+  const handlePriceChange = (e) => {
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      price: parseInt(e.target.value),
+    }));
+  };
+
   return (
     <section>
       <div className="container">
         <div className="mt-[55px] mb-[55px] w-[1280px] h-[218px] bg-base-300 p-[40px] rounded-[8px] ">
           <form onSubmit={handleSearchSubmit}>
-            <div className="flex flex-col  justify-between gap-[55px]">
-              <div className="flex  justify-between items-center gap-4">
+            <div className="flex flex-col justify-between gap-[55px]">
+              <div className="flex justify-between items-center gap-4">
                 <label className="input input-sm input-bordered flex items-center gap-2 w-[244px] h-[32px]">
                   <input
                     type="text"
@@ -181,19 +188,21 @@ export default function Products() {
               </div>
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between items-center">
                     <p>Select price</p>
-                    <p>$1,000.00</p>
+                    <p>${filters.price}</p>
                   </div>
                   <input
                     type="range"
                     min={0}
-                    max="1000"
-                    className="range range-primary w-[244px] "
+                    max={1000}
+                    value={filters.price}
+                    onChange={handlePriceChange}
+                    className="range range-primary w-[244px]"
                   />
                   <div className="flex justify-between">
-                    <p>0</p>
-                    <p> max: $1,000.00</p>
+                    <p>$0</p>
+                    <p>max: $1000.00</p>
                   </div>
                 </div>
                 <div className="flex gap-2">
@@ -205,7 +214,7 @@ export default function Products() {
                   </button>
                   <button
                     type="button"
-                    className="btn btn-danger btn-sm w-[244px] h-[32px] bg-pink-600  text-white"
+                    className="btn btn-danger btn-sm w-[244px] h-[32px] bg-pink-600 text-white"
                     onClick={handleReset}
                   >
                     RESET
