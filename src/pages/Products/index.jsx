@@ -235,7 +235,7 @@ export default function Products() {
         )}
 
         {!!currentItems?.length && (
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14 mb-[30px]">
             {currentItems.map((item) => {
               const { id, price, images, stock, rating, title } = item;
               return (
