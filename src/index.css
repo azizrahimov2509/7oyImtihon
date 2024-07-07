@@ -47,10 +47,9 @@
     font-weight: 400;
   }
 
-  /* Стили при активации NavLink */
   .nav-link.active {
-    background-color: #000; /* Черный фон */
-    color: #fff; /* Белый текст */
-    border-radius: 5px; /* Дополнительные стили, например, закругленные углы */
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
   }
 }

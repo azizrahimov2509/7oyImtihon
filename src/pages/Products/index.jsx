@@ -128,7 +128,7 @@ export default function Products() {
   const handlePriceChange = (e) => {
     setFilters((prevFilters) => ({
       ...prevFilters,
-      price: parseInt(e.target.value),
+      price: parseFloat(e.target.value),
     }));
   };
 
